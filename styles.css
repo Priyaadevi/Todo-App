@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Header Styling */
+h1 {
+    color: #ffcc00;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Input Field */
+input[type="text"] {
+    padding: 12px;
+    color: #333;
+    margin-bottom: 15px;
+    border: 2px solid #ffcc00;
+    border-radius: 6px;
+    width: 75%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to right, #ffcc00, #ff6600);
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff6600, #ff3300);
+    transform: scale(1.05);
+}
+
+/* Task List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffcc00;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: grey;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Delete Button */
+li button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+li button:hover {
+    background: darkred;
+}
+
+/* Fade Out Effect for Deleting */
+li.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}
